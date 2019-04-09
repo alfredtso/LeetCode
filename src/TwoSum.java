@@ -9,10 +9,11 @@ public class TwoSum {
                 if (i != j && nums[i] + nums[j] == target) {
                     result[0] = i;
                     result[1] = j;
+                    return result;
                 }
             }
         }
-        return result;
+        throw new IllegalArgumentException("No Solution");
     }
 
     public int[] twoSumST(int[] nums, int target) {
@@ -27,15 +28,13 @@ public class TwoSum {
                 return new int[] { result.get(complement), i};
             }
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException("No solution");
     }
 
     public static void main(String[] args) {
         int[] testing  = new int[] {2,7,11,15};
         TwoSum myAns = new TwoSum();
-        int[] ans = myAns.twoSumST(testing, 11);
-        int[] ans2 = myAns.twoSum(testing, 11);
-        System.out.println(ans);
-        System.out.println(ans2);
+        int[] ans = myAns.twoSumST(testing, 9);
+        int[] ans2 = myAns.twoSum(testing, 9);
     }
 }
