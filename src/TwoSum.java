@@ -30,4 +30,12 @@ public class TwoSum {
         throw new IllegalArgumentException();
     }
 
+    public static void main(String[] args) {
+        int[] testing  = new int[] {2,7,11,15};
+        TwoSum myAns = new TwoSum();
+        int[] ans = myAns.twoSumST(testing, 11);
+        int[] ans2 = myAns.twoSum(testing, 11);
+        System.out.println(ans);
+        System.out.println(ans2);
+    }
 }
